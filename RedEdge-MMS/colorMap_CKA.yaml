@@ -1,0 +1,266 @@
+%YAML:1.0
+
+##################################################
+#######         Information            ###########
+##################################################
+
+#  This is a class list document,
+#  which conatains the Name, id, and color information
+#  of used classes
+
+#  For adding a new class just copy one block and fill
+#  the name :
+#  <here the new Name>: !!opencv-matrix
+#
+#  and the information
+#  data: [class id (consider conventions) , red , green, blue]
+
+#  the color information is a 8-Bit unsigned char.
+#  Double colors are allowed
+
+# For further information please contact
+# 
+# Philipp Lottes   (Uni Bonn)   - philipp.lottes@igg.uni-bonn.de
+
+##################################################
+#######  COLOR MAP FOR CLASSIFICATION  ###########
+##################################################
+
+##################################################
+Other: !!opencv-matrix
+   rows: 1
+   cols: 4
+   dt: i
+   data: [ 1,  150 , 150 , 150 ]
+##################################################
+Negative: !!opencv-matrix
+   rows: 1
+   cols: 4
+   dt: i
+   data: [ 2,  255 , 0 , 0 ]
+##################################################
+
+##################################################
+Non-Vegetation: !!opencv-matrix
+   rows: 1
+   cols: 4
+   dt: i
+   data: [ 97,  255 , 255 , 255 ]
+##################################################
+Uncertain: !!opencv-matrix
+   rows: 1
+   cols: 4
+   dt: i
+   data: [ 98,  0 , 0 , 0 ]
+##################################################
+Mixed: !!opencv-matrix
+   rows: 1
+   cols: 4
+   dt: i
+   data: [ 99,  255 , 165 , 0 ]
+##################################################
+
+##################################################
+SugarBeets: !!opencv-matrix
+   rows: 1
+   cols: 4
+   dt: i
+   data: [ 10000,  0 , 255 , 0 ]
+##################################################
+
+##################################################
+SugarBeets2: !!opencv-matrix
+   rows: 1
+   cols: 4
+   dt: i
+   data: [ 10001,  0 , 255 , 0 ]
+##################################################
+
+##################################################
+Ferdinand: !!opencv-matrix
+   rows: 1
+   cols: 4
+   dt: i
+   data: [ 20000,  233 , 33 , 0 ]
+##################################################
+Dycotyl_other: !!opencv-matrix
+   rows: 1
+   cols: 4
+   dt: i
+   data: [ 20001,  255 , 0 , 0 ]
+##################################################
+Dycotyl_A: !!opencv-matrix
+   rows: 1
+   cols: 4
+   dt: i
+   data: [ 20002,  255 , 200 , 0 ]
+##################################################
+Dycotyl_B: !!opencv-matrix
+   rows: 1
+   cols: 4
+   dt: i
+   data: [ 20003,  255 , 150 , 0 ]
+##################################################
+Dycotyl_C: !!opencv-matrix
+   rows: 1
+   cols: 4
+   dt: i
+   data: [ 20004,  255 , 100 , 0 ]
+##################################################
+Dycotyl_D: !!opencv-matrix
+   rows: 1
+   cols: 4
+   dt: i
+   data: [ 20005,  255 , 50 , 0 ]
+##################################################
+Dycotyl_E: !!opencv-matrix
+   rows: 1
+   cols: 4
+   dt: i
+   data: [ 20006,  220 , 255 , 0 ]
+##################################################
+Dycotyl_F: !!opencv-matrix
+   rows: 1
+   cols: 4
+   dt: i
+   data: [ 20007,  180 , 255 , 0 ]
+##################################################
+Dycotyl_G: !!opencv-matrix
+   rows: 1
+   cols: 4
+   dt: i
+   data: [ 20008,  150 , 255 , 0 ]
+##################################################
+Dycotyl_H: !!opencv-matrix
+   rows: 1
+   cols: 4
+   dt: i
+   data: [ 20009,  120 , 255 , 0 ]
+##################################################
+Dycotyl_I: !!opencv-matrix
+   rows: 1
+   cols: 4
+   dt: i
+   data: [ 20010,  80 , 255 , 0 ]
+##################################################
+Dycotyl_J: !!opencv-matrix
+   rows: 1
+   cols: 4
+   dt: i
+   data: [ 20011,  80 , 255 , 50 ]
+##################################################
+
+
+
+##################################################
+Grass_other: !!opencv-matrix
+   rows: 1
+   cols: 4
+   dt: i
+   data: [ 20100,  0 , 0 , 255 ]
+##################################################
+Grass_A: !!opencv-matrix
+   rows: 1
+   cols: 4
+   dt: i
+   data: [ 20101, 0 , 50 , 255 ]
+##################################################
+Grass_B: !!opencv-matrix
+   rows: 1
+   cols: 4
+   dt: i
+   data: [ 20102, 0 , 150 , 255 ]
+##################################################
+Grass_C: !!opencv-matrix
+   rows: 1
+   cols: 4
+   dt: i
+   data: [ 20103, 0 , 250 , 255 ]
+##################################################
+Grass_D: !!opencv-matrix
+   rows: 1
+   cols: 4
+   dt: i
+   data: [ 20104, 0 , 255 , 200 ]
+##################################################
+Grass_E: !!opencv-matrix
+   rows: 1
+   cols: 4
+   dt: i
+   data: [ 20105, 0 , 255 , 150 ]
+
+
+##################################################
+Fused_A: !!opencv-matrix
+   rows: 1
+   cols: 4
+   dt: i
+   data: [ 30001, 255 , 0  , 255 ]
+##################################################
+Fused_B: !!opencv-matrix
+   rows: 1
+   cols: 4
+   dt: i
+   data: [ 30002, 100 , 0 , 255 ]
+##################################################
+Fused_C: !!opencv-matrix
+   rows: 1
+   cols: 4
+   dt: i
+   data: [ 30003, 255 , 0 , 100 ]
+##################################################
+Fused_D: !!opencv-matrix
+   rows: 1
+   cols: 4
+   dt: i
+   data: [ 30004, 0 , 255 , 200 ]
+##################################################
+Fused_E: !!opencv-matrix
+   rows: 1
+   cols: 4
+   dt: i
+   data: [ 30005, 0 , 100 , 255 ]
+
+################################################## 
+#################  CLASS LIST   ################## 
+########### for import in label tool ############# 
+
+# this list is just to put the names into the 
+# label tool item box 
+
+# this method could be improved
+
+################################################## 
+
+numberOfClasses: 30
+
+1:  'Other'
+2:  'Negative'
+97:  'Non-Vegetation'
+98:  'Uncertain'
+99:  'Mixed'
+10000:  'SugarBeets'
+10001:  'SugarBeets2'
+20000:  'Ferdinand'
+20001:  'Dycotyl_other'
+20002:  'Dycotyl_A'
+20003:  'Dycotyl_B'
+20004:  'Dycotyl_C'
+20005:  'Dycotyl_D'
+20006:  'Dycotyl_E'
+20007:  'Dycotyl_F'
+20008:  'Dycotyl_G'
+20009:  'Dycotyl_H'
+20010:  'Dycotyl_I'
+20011:  'Dycotyl_J'
+20100: 'Grass_other'
+20101: 'Grass_A'
+20102: 'Grass_B'
+20103: 'Grass_C'
+20104: 'Grass_D'
+20105: 'Grass_E'
+30001: 'Fused_A'
+30002: 'Fused_B'
+30003: 'Fused_C'
+30004: 'Fused_D'
+30005: 'Fused_E'

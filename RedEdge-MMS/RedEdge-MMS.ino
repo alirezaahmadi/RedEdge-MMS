@@ -45,6 +45,8 @@ File myFile;
 
 #define DutyCycle 512
 
+#define LaserPoint 2
+
 // Uncomment this line to use long range mode. This
 // increases the sensitivity of the sensor and extends its
 // potential range, but increases the likelihood of getting
@@ -90,6 +92,7 @@ int8_t tmp_index=1;
 void setup() {
   Wire.begin();
   pinMode(ShotTrig, OUTPUT);digitalWrite(ShotTrig,LOW);
+  pinMode(LaserPoint, OUTPUT);digitalWrite(LaserPoint,HIGH);
   pinMode(buttonPin, INPUT);
   pinMode(SS, OUTPUT);
 #ifdef Debbug_mode
@@ -290,6 +293,8 @@ float pitch = 0.0;
   oled.println(ImageNumber);
   if(button_press(buttonPin,ImageNumber)){
     if(WriteLineToSSD(myFile,ImageNumber,PlantCrop[lable_index].id,PlantCrop[lable_index].Name,distance,roll,pitch)){
+      digitalWrite(LaserPoint,LOW);
+      delay(50);
       digitalWrite(ShotTrig,HIGH);
       delay(200);
     }else{
@@ -301,8 +306,10 @@ float pitch = 0.0;
         if(button_press(buttonPin,Error_count))break;
       }
     }
+    
   }
   digitalWrite(ShotTrig,LOW);
+  digitalWrite(LaserPoint,HIGH);
   //second row
   oled.set2X();
   oled.println(PlantCrop[lable_index].Name);

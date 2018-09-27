@@ -50,8 +50,8 @@ void getRollPitchYaw(float& Roll,float& Pitch){
   Roll = (float)atan2(Axyz[1],Axyz[2])*(180/3.1415);
   Pitch = (float)(-atan2(-Axyz[0], sqrt((Axyz[1] * Axyz[1]) + (Axyz[2] * Axyz[2]))) * (180 / 3.1415));
   //complimentary filter
-  Roll_output = 0.98*(0.1*Roll_output+0.9*d_angle_x) + 0.02*Roll;
-  Pitch_output = 0.98*(0.1*Roll_output+0.9*d_angle_y) + 0.02*Pitch;
+  Roll_output = 0.8*(0.1*Roll_output+0.9*d_angle_x) + 0.2*Roll;
+  Pitch_output = 0.8*(0.1*Roll_output+0.9*d_angle_y) + 0.2*Pitch;
   Roll = Roll_output - 3.32;
   Pitch = Pitch_output - 0.26;
 }

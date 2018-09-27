@@ -1,6 +1,6 @@
 void software_Reset() // Restarts program from beginning but does not reset the peripherals and registers
 {
-asm volatile ("  jmp 0");  
+  asm volatile ("  jmp 0");  
 }  
 void Error_status_LCD(String Message){
   oled.clear();
@@ -20,14 +20,24 @@ bool WriteLineToSSD(File& myFile, uint16_t ImageNumber,uint16_t id,String Name,u
     //myFile.println("testing 1, 2, 3.");
     myFile.print(ImageNumber);myFile.print("\t");
     myFile.print(id);myFile.print("\t");
-    myFile.print(Name);myFile.print("\t");
     myFile.print(distance);myFile.print("\t");
     myFile.print(roll);myFile.print("\t");
-    myFile.println(pitch);
+    myFile.print(pitch);myFile.print("\t");
+    myFile.println(Name);
     // close the file:
     myFile.flush();
     myFile.close();
-    
+    Serial.print(ImageNumber);
+    Serial.print("\t");
+    Serial.print(id);
+    Serial.print("\t");
+    Serial.print(distance);
+    Serial.print("\t");
+    Serial.print(roll);
+    Serial.print("\t");
+    Serial.print(pitch);
+    Serial.print("\t");
+    Serial.println(Name);
   } else {
     // if the file didn't open, print an error:
    Serial.println("Write - error opening log.txt");

@@ -16,6 +16,8 @@
 #define MPU9250_ADDRESS 0x68
 #define MAG_ADDRESS 0x0C
 
+#define LED 9
+
 #define GYRO_FULL_SCALE_250_DPS 0x00 
 #define GYRO_FULL_SCALE_500_DPS 0x08
 #define GYRO_FULL_SCALE_1000_DPS 0x10
@@ -35,17 +37,18 @@ VL53L0X sensor;
 SSD1306AsciiAvrI2c oled;
 File myFile;
 //************* Joy stick Pins *********************
-#define joyPin1   0                 // slider variable connecetd to analog pin 0
-#define joyPin2   1                 // slider variable connecetd to analog pin 1
+#define joyPin1   A0                 // slider variable connecetd to analog pin 0
+#define joyPin2   A1                 // slider variable connecetd to analog pin 1
 #define buttonPin A2                // Joy button
 
-#define MMC_CS    4
+#define MMC_CS    2
 
-#define ShotTrig 10
+#define ShotTrig  6
 
 #define DutyCycle 512
 
-#define LaserPoint 2
+#define LaserPoint A3
+#define LaserDealy 1000
 
 // Uncomment this line to use long range mode. This
 // increases the sensitivity of the sensor and extends its
@@ -95,8 +98,9 @@ void setup() {
   pinMode(LaserPoint, OUTPUT);digitalWrite(LaserPoint,HIGH);
   pinMode(buttonPin, INPUT);
   pinMode(SS, OUTPUT);
+  Serial.begin(115200);
 #ifdef Debbug_mode
-  Serial.begin(9600);
+  Serial.begin(115200);
   while (!Serial) {
     ; // wait for serial port to connect. Needed for native USB port only
   }
@@ -276,7 +280,7 @@ delay(100);
 }
 //******************* Main Loop ***************
 void loop() {
-  
+digitalWrite(LED,HIGH);
 uint16_t distance = 0;
 uint16_t distance_tmp = 0;
 float roll = 0.0;
@@ -296,7 +300,7 @@ float pitch = 0.0;
       digitalWrite(LaserPoint,LOW);
       delay(50);
       digitalWrite(ShotTrig,HIGH);
-      delay(200);
+      delay(LaserDealy);
     }else{
       oled.clear();
       while(1){
@@ -320,8 +324,13 @@ float pitch = 0.0;
   oled.print(roll);
   oled.print("  ");
   oled.print(pitch);
-  //Joy_press(joyPin1, PC_cnt, lable_index, 100, 500, 250);
-  Joy_press(joyPin2, PC_cnt, lable_index, 100, 500, 250);
+  //Serial.print(analogRead(joyPin1));
+  //Serial.print("\t");
+  //Serial.println(analogRead(joyPin2));
+  //Joy_press(joyPin1, PC_cnt, lable_index, 100, 900, 250);
+  Joy_press(joyPin2, PC_cnt, lable_index, 100, 900, 250);
+  digitalWrite(LED,LOW);
+  delay(10);
 }
 
 

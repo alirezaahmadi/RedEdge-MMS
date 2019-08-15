@@ -1,3 +1,9 @@
+/*%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% by: Alireza Ahmadi                                     %
+% University of Bonn- MSc Robotics & Geodetic Engineering%
+% Alireza.Ahmadi@uni-bonn.de                             %
+% AlirezaAhmadi.xyz                                      %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%*/
 // This function read Nbytes bytes from I2C device at address Address. 
 // Put read bytes starting at register Register in the Data array. 
 bool I2Cread(uint8_t Address, uint8_t Register, uint8_t Nbytes, uint8_t* Data)

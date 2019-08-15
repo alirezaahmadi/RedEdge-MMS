@@ -1,3 +1,9 @@
+/*%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% by: Alireza Ahmadi                                     %
+% University of Bonn- MSc Robotics & Geodetic Engineering%
+% Alireza.Ahmadi@uni-bonn.de                             %
+% AlirezaAhmadi.xyz                                      %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%*/
 void software_Reset() // Restarts program from beginning but does not reset the peripherals and registers
 {
   asm volatile ("  jmp 0");  

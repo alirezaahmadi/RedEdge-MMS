@@ -1,3 +1,9 @@
+/*%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% by: Alireza Ahmadi                                     %
+% University of Bonn- MSc Robotics & Geodetic Engineering%
+% Alireza.Ahmadi@uni-bonn.de                             %
+% AlirezaAhmadi.xyz                                      %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%*/
 bool IMUSteup(void){
 
 if(I2CwriteByte(MPU9250_ADDRESS,29,0x06))// Set accelerometers low pass filter at 5Hz
